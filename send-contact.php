@@ -1,12 +1,10 @@
 <?php
-/**
- * Contact Form Handler
- * Обработка на контактна форма и изпращане на имейл
- */
 
 // Enable error reporting for debugging (remove in production)
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', 'php_errors.log');
 
 // Set content type to JSON
 header('Content-Type: application/json; charset=utf-8');
@@ -161,11 +159,6 @@ try {
         $response['success'] = true;
         $response['message'] = 'Съобщението е изпратено успешно!';
         
-        // Optional: Log to file
-        logContactForm($name, $email, $phone, $subject, $message);
-        
-        // Optional: Send auto-reply to user
-        sendAutoReply($email, $name);
         
     } else {
         $response['message'] = 'Грешка при изпращане на имейл. Моля, опитайте отново или се свържете с нас директно.';
@@ -176,102 +169,4 @@ try {
 
 echo json_encode($response);
 
-/**
- * Log contact form submissions to a file
- */
-function logContactForm($name, $email, $phone, $subject, $message) {
-    $log_file = 'contact_logs.txt';
-    $log_entry = sprintf(
-        "[%s] Name: %s | Email: %s | Phone: %s | Subject: %s | Message: %s\n",
-        date('Y-m-d H:i:s'),
-        $name,
-        $email,
-        $phone,
-        $subject,
-        str_replace(array("\r", "\n"), ' ', $message)
-    );
-    
-    file_put_contents($log_file, $log_entry, FILE_APPEND | LOCK_EX);
-}
-
-/**
- * Send auto-reply to user
- */
-function sendAutoReply($user_email, $user_name) {
-    $subject = 'Благодарим за запитването - Солидност';
-    
-    $message = "
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset='UTF-8'>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-            }
-            .container {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-            }
-            .header {
-                background: #002f4d;
-                color: white;
-                padding: 30px 20px;
-                text-align: center;
-                border-radius: 10px 10px 0 0;
-            }
-            .content {
-                padding: 30px 20px;
-                background: #f9f9f9;
-            }
-            .footer {
-                background: #333;
-                color: white;
-                padding: 20px;
-                text-align: center;
-                border-radius: 0 0 10px 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Благодарим Ви!</h1>
-            </div>
-            <div class='content'>
-                <p>Здравейте" . ($user_name ? ', ' . $user_name : '') . ",</p>
-                
-                <p>Благодарим Ви за проявения интерес към нашите продукти и услуги!</p>
-                
-                <p>Вашето запитване е получено успешно и нашият екип ще се свърже с Вас в най-кратък срок.</p>
-                
-                <p>Ако имате спешен въпрос, можете да се свържете с нас директно:</p>
-                <ul>
-                    <li>Телефон: <strong>+359 888 227 352</strong></li>
-                    <li>Имейл: <strong>office@solidnost.com</strong></li>
-                </ul>
-                
-                <p>С уважение,<br>
-                <strong>Екипът на Солидност</strong></p>
-            </div>
-            <div class='footer'>
-                <p>Солидност - Производство на кантослепващи машини</p>
-                <p>бул. Тутракан №20, гр. Русе, България</p>
-                <p>www.solidnost.com</p>
-            </div>
-        </div>
-    </body>
-    </html>
-    ";
-    
-    $headers = array();
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=utf-8';
-    $headers[] = 'From: Солидност <office@solidnost.com>';
-    
-    mail($user_email, $subject, $message, implode("\r\n", $headers));
-}
 ?>
