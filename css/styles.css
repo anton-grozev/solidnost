@@ -95,10 +95,15 @@ img {
 
 .navbar-brand img {
   height: 50px;
+  width: auto;
   transition: transform 0.3s ease;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
+  /* Оптимизация за SVG и PNG */
+  image-rendering: auto;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.05);
 }
 
 .navbar-brand:hover img {
@@ -509,6 +514,23 @@ img {
 .social-links a:hover {
   transform: translateY(-5px);
   color: var(--accent-color) !important;
+}
+
+/* Footer logo optimization */
+.contact-info img,
+footer img {
+  image-rendering: auto;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.05);
+}
+
+/* SVG global optimization */
+svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
 }
 
 /* ===================================
