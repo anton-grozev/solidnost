@@ -1,2 +1,9 @@
 screenshots/
 *.log
+
+# Temporary encoding fix scripts
+*.backup
+*-test.html
+comprehensive_fix*.py
+final_fix.py
+fix_encoding*.py
