@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Главна страница -->
+  <url>
+    <loc>https://www.solidnost.com/</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.solidnost.com/images/solidnost_logo.png</image:loc>
+      <image:title>Солидност Лого</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Кантослепващи машини -->
+  <url>
+    <loc>https://www.solidnost.com/kantoslepvashti-mashini.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Сервизни услуги -->
+  <url>
+    <loc>https://www.solidnost.com/servizni-uslugi.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Машини втора употреба -->
+  <url>
+    <loc>https://www.solidnost.com/vtora-upotreba.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Галерия -->
+  <url>
+    <loc>https://www.solidnost.com/galeria.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Видео галерия -->
+  <url>
+    <loc>https://www.solidnost.com/video-galeria.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Контакти -->
+  <url>
+    <loc>https://www.solidnost.com/kontakti.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Продукти -->
+  <url>
+    <loc>https://www.solidnost.com/product-km7000.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.solidnost.com/images/km7000.jpg</image:loc>
+      <image:title>KM 7000</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://www.solidnost.com/product-km4001pe.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.solidnost.com/images/km4001pe.jpg</image:loc>
+      <image:title>KM 4001 PE</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://www.solidnost.com/product-km900m.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.solidnost.com/images/km900m.jpg</image:loc>
+      <image:title>KM 900 M</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://www.solidnost.com/product-km2015tpm.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.solidnost.com/images/km2015tpm.jpg</image:loc>
+      <image:title>KM 2015 TPM</image:title>
+    </image:image>
+  </url>
+  
+</urlset>

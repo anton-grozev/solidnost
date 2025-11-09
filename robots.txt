@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /_private/
+
+# Allow CSS and JS
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://www.solidnost.com/sitemap.xml
+
+# Crawl-delay (optional, for heavy crawlers)
+Crawl-delay: 1
