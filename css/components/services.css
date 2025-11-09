@@ -1,0 +1,58 @@
+/* ========================================
+   Services - Услуги
+   ======================================== */
+
+.service-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 2rem 1.5rem;
+  box-shadow: none;
+  transition: none;
+  border: none;
+  text-align: center;
+}
+
+.service-image {
+  max-width: 250px;
+  margin: 0 auto 1rem;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* About съдържание */
+.about-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-content .lead {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}

@@ -1,0 +1,89 @@
+/* ========================================
+   Responsive - Мобилни стилове
+   ======================================== */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-slide {
+    min-height: 400px;
+  }
+  
+  .hero-content {
+    padding: 40px 0;
+  }
+  
+  .hero-content h1,
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-content .lead {
+    font-size: 1.1rem;
+  }
+  
+  .product-image {
+    height: 200px;
+  }
+  
+  /* CSS Logo responsive */
+  .css-logo {
+    font-size: 24px;
+  }
+  
+  .css-logo-footer {
+    font-size: 32px;
+  }
+  
+  .logo-tagline {
+    font-size: 10px;
+    max-width: 220px;
+    letter-spacing: 0.3px;
+  }
+  
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .viber-float {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    bottom: 80px;
+    right: 20px;
+  }
+  
+  .back-to-top {
+    bottom: 150px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .service-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1,
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

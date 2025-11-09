@@ -1,0 +1,26 @@
+/* ========================================
+   CSS Variables - Централизирани променливи
+   ======================================== */
+
+:root {
+  /* Colors */
+  --primary-color: #002f4d;
+  --secondary-color: #0066cc;
+  --accent-color: #ff6b35;
+  --accent-light: #ff8a65;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #f8f9fa;
+  --border-color: #e0e0e0;
+  --success-color: #28a745;
+  
+  /* Shadows */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --nav-glow: 0 0 20px rgba(255, 107, 53, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background
+        ctx.fillStyle = '#003d66';
+        ctx.fillRect(0, 0, 512, 512);
+        
+        // Draw letter C with gradient and stroke
+        ctx.font = 'italic 900 450px Impact, Arial Black, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, 512);
+        gradient.addColorStop(0, '#FFED4E');
+        gradient.addColorStop(0.5, '#FFD700');
+        gradient.addColorStop(1, '#FFA500');
+        
+        // Black stroke
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 16;
+        ctx.lineJoin = 'round';
+        ctx.strokeText('C', 256, 280);
+        
+        // Gold fill
+        ctx.fillStyle = gradient;
+        ctx.fillText('C', 256, 280);
+        
+        // Convert to different sizes and download
+        function downloadPNG(size, filename) {
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = size;
+            tempCanvas.height = size;
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCtx.drawImage(canvas, 0, 0, size, size);
+            
+            tempCanvas.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        // Auto-download all sizes
+        setTimeout(() => {
+            downloadPNG(32, 'favicon.png');
+            setTimeout(() => downloadPNG(180, 'favicon_180.png'), 500);
+            setTimeout(() => downloadPNG(192, 'favicon_192.png'), 1000);
+            setTimeout(() => downloadPNG(512, 'favicon_512.png'), 1500);
+        }, 1000);
+    </script>
+    <p>Favicon-ите ще се изтеглят автоматично след 1 секунда...</p>
+</body>
+</html>

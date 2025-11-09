@@ -1,0 +1,23 @@
+/* ========================================
+   SOLIDNOST - Главен CSS файл
+   Модулна структура за лесно поддържане
+   ======================================== */
+
+/* CSS Custom Properties - Променливи */
+@import url('components/variables.css');
+
+/* Base Styles - Основни стилове */
+@import url('components/base.css');
+
+/* Components - Компоненти */
+@import url('components/navigation.css');
+@import url('components/hero.css');
+@import url('components/products.css');
+@import url('components/services.css');
+@import url('components/forms.css');
+@import url('components/gallery.css');
+@import url('components/footer.css');
+@import url('components/utilities.css');
+
+/* Responsive - Адаптивен дизайн */
+@import url('components/responsive.css');
