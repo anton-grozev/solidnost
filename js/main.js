@@ -1,13 +1,7 @@
-// ===================================
 // Main JavaScript File
-// ===================================
-
 (function($) {
   'use strict';
 
-  // ===================================
-  // Document Ready
-  // ===================================
   $(document).ready(function() {
     
     // Initialize Owl Carousel
@@ -33,9 +27,6 @@
     
   });
 
-  // ===================================
-  // Initialize Owl Carousel
-  // ===================================
   function initCarousel() {
     if ($('.owl-carousel').length) {
       $('.owl-carousel').owlCarousel({
@@ -65,9 +56,6 @@
     }
   }
 
-  // ===================================
-  // Initialize Contact Form
-  // ===================================
   function initContactForm() {
     $('#contactForm').on('submit', function(e) {
       e.preventDefault();
@@ -122,17 +110,11 @@
     });
   }
 
-  // ===================================
-  // Validate Email
-  // ===================================
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 
-  // ===================================
-  // Show Form Message
-  // ===================================
   function showFormMessage(message, type) {
     const alertClass = `alert alert-${type}`;
     const html = `
@@ -151,9 +133,6 @@
     }, 5000);
   }
 
-  // ===================================
-  // Back to Top Button
-  // ===================================
   function initBackToTop() {
     const backToTopBtn = $('#backToTop');
     
@@ -173,9 +152,6 @@
     });
   }
 
-  // ===================================
-  // Cookie Consent
-  // ===================================
   function initCookieConsent() {
     // Check if user has already accepted cookies
     if (!localStorage.getItem('cookiesAccepted')) {
@@ -185,28 +161,13 @@
     }
   }
 
-  // Accept cookies function (global)
   window.acceptCookies = function() {
     localStorage.setItem('cookiesAccepted', 'true');
     $('#cookieConsent').fadeOut();
     
-    // Initialize Google Analytics or other tracking here
-    initAnalytics();
   };
 
-  // ===================================
-  // Initialize Analytics
-  // ===================================
-  function initAnalytics() {
-    // Add Google Analytics code here
-    // Example:
-    // gtag('config', 'GA_MEASUREMENT_ID');
-    // console.log('Analytics initialized'); // Removed for production
-  }
 
-  // ===================================
-  // Smooth Scroll
-  // ===================================
   function initSmoothScroll() {
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
       if (
@@ -227,9 +188,6 @@
     });
   }
 
-  // ===================================
-  // Initialize Lightbox
-  // ===================================
   function initLightbox() {
     if ($('.lightbox').length) {
       $('.lightbox').simpleLightbox({
@@ -241,9 +199,6 @@
     }
   }
 
-  // ===================================
-  // Animate on Scroll
-  // ===================================
   function animateOnScroll() {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -266,113 +221,55 @@
     });
   }
 
-  // ===================================
-  // Navbar Scroll Effect
-  // ===================================
-  $(window).scroll(function() {
-    const navbar = $('.navbar');
-    if ($(this).scrollTop() > 50) {
-      navbar.addClass('scrolled');
-    } else {
-      navbar.removeClass('scrolled');
-    }
-  });
 
-  // ===================================
-  // Mobile Menu Auto Close
-  // ===================================
   $('.navbar-nav .nav-link').on('click', function() {
     if ($(window).width() < 992) {
       $('.navbar-collapse').collapse('hide');
     }
   });
 
-  // ===================================
-  // Form Input Focus Effect
-  // ===================================
-  $('.form-control, .form-select').on('focus', function() {
-    $(this).parent().addClass('focused');
-  }).on('blur', function() {
-    if (!$(this).val()) {
-      $(this).parent().removeClass('focused');
-    }
-  });
-
-  // ===================================
-  // Lazy Loading Images
-  // ===================================
-  if ('loading' in HTMLImageElement.prototype) {
-    // Browser supports lazy loading
-    $('img[data-src]').each(function() {
-      $(this).attr('src', $(this).attr('data-src'));
-      $(this).attr('loading', 'lazy');
-    });
-  } else {
-    // Fallback for browsers that don't support lazy loading
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.add('loaded');
-          observer.unobserve(img);
+  // Set active navigation item based on current page
+  function setActiveNavItem() {
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
+    // Remove all active classes first
+    $('.navbar-nav .nav-link').removeClass('active');
+    
+    // Set active class based on current page
+    $('.navbar-nav .nav-link').each(function() {
+      const href = $(this).attr('href');
+      
+      if (href) {
+        const linkPage = href.split('/').pop();
+        
+        // Check if current page matches
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === 'index.html' && href === '../index.html')) {
+          $(this).addClass('active');
         }
-      });
+        
+        // Check for dropdown items
+        if ($(this).hasClass('dropdown-toggle')) {
+          const dropdownItems = $(this).next('.dropdown-menu').find('.dropdown-item');
+          dropdownItems.each(function() {
+            const dropdownHref = $(this).attr('href');
+            if (dropdownHref) {
+              const dropdownPage = dropdownHref.split('/').pop();
+              if (dropdownPage === currentPage) {
+                $(this).addClass('active');
+                $(this).closest('.nav-item').find('.dropdown-toggle').addClass('active');
+              }
+            }
+          });
+        }
+      }
     });
-
-    lazyImages.forEach(img => imageObserver.observe(img));
   }
-
-  // ===================================
-  // Print Page Function
-  // ===================================
-  window.printPage = function() {
-    window.print();
-  };
-
-  // ===================================
-  // Share on Social Media
-  // ===================================
-  window.shareOnFacebook = function(url) {
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(shareUrl, 'facebook-share', 'width=600,height=400');
-  };
-
-  window.shareOnLinkedIn = function(url) {
-    const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-    window.open(shareUrl, 'linkedin-share', 'width=600,height=400');
-  };
-
-  // ===================================
-  // Console Welcome Message (Development only)
-  // ===================================
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    console.log(
-      '%c👋 Здравейте от Солидност! ',
-      'background: #002f4d; color: white; font-size: 20px; padding: 10px;'
-    );
-    console.log(
-      '%cИнтересувате ли се от сътрудничество? Свържете се с нас: office@solidnost.com',
-      'font-size: 14px; color: #0066cc;'
-    );
-  }
+  
+  // Call on page load
+  setActiveNavItem();
 
 })(jQuery);
 
-// ===================================
-// Service Worker Registration (PWA)
-// ===================================
-// Service Worker registration commented out until PWA implementation
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', function() {
-//     navigator.serviceWorker.register('/sw.js').then(
-//       function(registration) {
-//         console.log('ServiceWorker registration successful');
-//       },
-//       function(err) {
-//         console.log('ServiceWorker registration failed: ', err);
-//       }
-//     );
-//   });
-// }

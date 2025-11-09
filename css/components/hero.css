@@ -1,0 +1,113 @@
+/* ========================================
+   Hero Slider - Начална секция
+   ======================================== */
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-slide {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 47, 77, 0.7);
+}
+
+.slide-1 {
+  background-image: linear-gradient(rgba(0, 47, 77, 0.7), rgba(0, 47, 77, 0.7)), url('../images/km7000.jpg');
+}
+
+.slide-2 {
+  background-image: linear-gradient(rgba(0, 102, 204, 0.7), rgba(0, 47, 77, 0.7)), url('../images/km4001pe.jpg');
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-content h1,
+.hero-content h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Owl Carousel контроли */
+.owl-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-nav button:hover {
+  background: var(--accent-color) !important;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  left: 20px;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  right: 20px;
+}
+
+.owl-carousel .owl-dots {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.owl-carousel .owl-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--border-color);
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-dot.active {
+  background: var(--secondary-color);
+  width: 30px;
+  border-radius: 6px;
+}

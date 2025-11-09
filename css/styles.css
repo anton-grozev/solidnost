@@ -1,10 +1,8 @@
-/* ===================================
-   Global Styles
-   =================================== */
 :root {
   --primary-color: #002f4d;
   --secondary-color: #0066cc;
   --accent-color: #ff6b35;
+  --accent-light: #ff8a65;
   --text-dark: #333333;
   --text-light: #666666;
   --bg-light: #f8f9fa;
@@ -12,6 +10,7 @@
   --success-color: #28a745;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --nav-glow: 0 0 20px rgba(255, 107, 53, 0.3);
 }
 
 * {
@@ -63,9 +62,6 @@ img {
   border-radius: 2px;
 }
 
-/* ===================================
-   Cookie Consent
-   =================================== */
 .cookie-consent {
   position: fixed;
   bottom: 0;
@@ -83,117 +79,277 @@ img {
   font-size: 0.95rem;
 }
 
-/* ===================================
-   Navigation
-   =================================== */
 .navbar {
   background-color: var(--primary-color) !important;
   padding: 1rem 0;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
-.navbar-brand img {
-  height: 50px;
-  width: auto;
-  transition: transform 0.3s ease;
-  /* Оптимизация за SVG и PNG */
-  image-rendering: auto;
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
+.css-logo {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px 5px 5px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  filter: contrast(1.05);
+  text-rendering: optimizeLegibility;
+  background: linear-gradient(180deg, #FFED4E 0%, #FFD700 50%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(2px 2px 0 #000) drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
 
-.navbar-brand:hover img {
-  transform: scale(1.05);
+.css-logo-footer {
+  font-size: 42px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 5px 15px 5px 5px;
 }
+
+.logo-tagline {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 4px;
+  max-width: 320px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.navbar-brand {
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.navbar-brand:hover .css-logo {
+  filter: 
+    drop-shadow(-2px -2px 0 #000)
+    drop-shadow(2px -2px 0 #000)
+    drop-shadow(-2px 2px 0 #000)
+    drop-shadow(2px 2px 0 #000)
+    drop-shadow(0 0 4px rgba(0, 0, 0, 0.7));
+}
+
+
 
 .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 500;
-  padding: 0.5rem 1rem !important;
-  margin: 0 0.2rem;
+  padding: 0.75rem 1.25rem !important;
+  margin: 0 0.25rem;
   transition: all 0.3s ease;
   position: relative;
+  border-radius: 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item:last-child .nav-link {
+  border-right: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255, 107, 53, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .navbar-nav .nav-link.active {
   color: #ffffff !important;
+  background: linear-gradient(135deg, var(--accent-color), #ff8a65);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 107, 53, 0.2);
+  font-weight: 600;
+  animation: navGlow 2s ease-in-out infinite alternate;
 }
 
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 80%;
-  height: 2px;
-  background: var(--accent-color);
-  transition: transform 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  transform: translateX(-50%) scaleX(1);
+@keyframes navGlow {
+  from {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 107, 53, 0.2);
+  }
+  to {
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.5), 0 0 25px rgba(255, 107, 53, 0.3);
+  }
 }
 
 .phone-link {
-  background: var(--accent-color);
+  background: linear-gradient(135deg, var(--accent-color), #ff8a65);
   border-radius: 25px;
-  padding: 0.5rem 1.5rem !important;
+  padding: 0.75rem 1.75rem !important;
   font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+  border: none !important;
+  margin-left: 0.5rem !important;
 }
 
 .phone-link:hover {
-  background: #ff5722;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff5722, #ff6f43);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.5);
 }
 
 .dropdown-menu {
-  background: var(--primary-color);
-  border: none;
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, #003d66 0%, #002f4d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   margin-top: 0.5rem;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  animation: dropdownSlide 0.3s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-item {
   color: rgba(255, 255, 255, 0.9);
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   transition: all 0.3s ease;
+  border-radius: 6px;
+  margin: 0.25rem 0.5rem;
+  position: relative;
+  border-left: 3px solid transparent;
 }
 
-.dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+.dropdown-item:hover,
+.dropdown-item.active {
+  background: rgba(255, 107, 53, 0.15);
   color: white;
+  border-left-color: var(--accent-color);
   padding-left: 2rem;
+  box-shadow: inset 0 0 20px rgba(255, 107, 53, 0.1);
 }
 
-/* Mobile nav styling */
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
 .top-phone {
+  display: inline-block;
+}
+
+.top-phone a {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  padding: 0.6rem 1.25rem;
+  border-radius: 25px;
   font-size: 0.9rem;
+  font-weight: 600;
+  color: white !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.top-phone a:hover {
+  background: linear-gradient(135deg, #ff5722, #ff6f43);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.5);
+}
+
+.top-phone a i {
+  font-size: 1rem;
 }
 
 @media (max-width: 991px) {
+  .navbar-brand {
+    flex: 1;
+    max-width: 60%;
+  }
+  
+  .top-phone {
+    margin-right: 0.75rem;
+  }
+  
+  .top-phone a {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .navbar-toggler {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
   .navbar-nav {
     padding: 1rem 0;
   }
   
   .navbar-nav .nav-link {
     padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  .navbar-nav .nav-link::after {
-    display: none;
+  .navbar-nav .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+  
+  .phone-link {
+    margin: 0.5rem 0 !important;
+  }
+  
+  .dropdown-menu {
+    background: rgba(0, 61, 102, 0.95);
+    border: none;
+    box-shadow: none;
+    margin-left: 1rem;
   }
 }
 
-/* ===================================
-   Hero Slider
-   =================================== */
+@media (max-width: 576px) {
+  .navbar-brand {
+    max-width: 50%;
+  }
+  
+  .css-logo {
+    font-size: 24px;
+  }
+  
+  .logo-tagline {
+    font-size: 10px;
+    max-width: 180px;
+  }
+  
+  .top-phone a {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .top-phone a i {
+    font-size: 0.85rem;
+  }
+}
+
 .hero-slider {
   position: relative;
 }
@@ -303,9 +459,6 @@ img {
   border-radius: 6px;
 }
 
-/* ===================================
-   Product Cards
-   =================================== */
 .product-card {
   background: white;
   border-radius: 12px;
@@ -337,18 +490,6 @@ img {
   transform: scale(1.1);
 }
 
-.product-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--accent-color);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  z-index: 2;
-}
 
 .product-body {
   padding: 1.5rem;
@@ -367,9 +508,6 @@ img {
   min-height: 80px;
 }
 
-/* ===================================
-   About Section
-   =================================== */
 .about-content {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -391,28 +529,15 @@ img {
   position: relative;
 }
 
-.custom-list li i {
-  position: absolute;
-  left: 0;
-  top: 0.7rem;
-}
 
-/* ===================================
-   Service Cards
-   =================================== */
 .service-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2.5rem 1.5rem;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--secondary-color);
+  background: transparent;
+  border-radius: 0;
+  padding: 2rem 1.5rem;
+  box-shadow: none;
+  transition: none;
+  border: none;
+  text-align: center;
 }
 
 .service-image {
@@ -438,14 +563,11 @@ img {
   margin: 0;
 }
 
-/* ===================================
-   Contact Form
-   =================================== */
 .contact-form .form-control,
 .contact-form .form-select {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  color: var(--text-dark);
   padding: 0.75rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -453,37 +575,44 @@ img {
 
 .contact-form .form-control:focus,
 .contact-form .form-select:focus {
-  background: rgba(255, 255, 255, 0.15);
+  background: #ffffff;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
-  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.15);
+  color: var(--text-dark);
+  outline: none;
 }
 
 .contact-form .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(102, 102, 102, 0.7);
 }
 
 .contact-form .form-label {
   font-weight: 500;
   margin-bottom: 0.5rem;
+  color: var(--text-dark);
 }
 
 .contact-form .form-select option {
-  background: var(--primary-color);
-  color: white;
+  background: #ffffff;
+  color: var(--text-dark);
 }
 
 .contact-info p {
   margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  font-size: 1.05rem;
 }
 
 .contact-info a {
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .contact-info a:hover {
   color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .footer-links {
@@ -516,16 +645,6 @@ img {
   color: var(--accent-color) !important;
 }
 
-/* Footer logo optimization */
-.contact-info img,
-footer img {
-  image-rendering: auto;
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  filter: contrast(1.05);
-}
 
 /* SVG global optimization */
 svg {
@@ -533,9 +652,6 @@ svg {
   text-rendering: geometricPrecision;
 }
 
-/* ===================================
-   WhatsApp Float Button
-   =================================== */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -553,7 +669,7 @@ svg {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  animation: pulse 2s infinite;
+  animation: pulse-whatsapp 2s infinite;
 }
 
 .whatsapp-float:hover {
@@ -562,7 +678,33 @@ svg {
   color: white;
 }
 
-@keyframes pulse {
+.viber-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 100px;
+  right: 30px;
+  background-color: #7360f2;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse-viber 2s infinite;
+}
+
+.viber-float:hover {
+  background-color: #665dc0;
+  transform: scale(1.1);
+  color: white;
+}
+
+@keyframes pulse-whatsapp {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
@@ -571,9 +713,15 @@ svg {
   }
 }
 
-/* ===================================
-   Back to Top Button
-   =================================== */
+@keyframes pulse-viber {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(115, 96, 242, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(115, 96, 242, 0);
+  }
+}
+
 .back-to-top {
   position: fixed;
   bottom: 100px;
@@ -603,9 +751,6 @@ svg {
   transform: translateY(-5px);
 }
 
-/* ===================================
-   Buttons
-   =================================== */
 .btn {
   padding: 0.75rem 2rem;
   font-weight: 600;
@@ -641,23 +786,13 @@ svg {
   font-size: 1.1rem;
 }
 
-/* ===================================
-   Alerts
-   =================================== */
 .alert {
   border-radius: 10px;
   border: none;
   padding: 1rem 1.5rem;
 }
 
-.alert-info {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-  color: var(--primary-color);
-}
 
-/* ===================================
-   Footer
-   =================================== */
 footer {
   background: #000000 !important;
   padding: 1.5rem 0;
@@ -665,19 +800,8 @@ footer {
 }
 
 /* ===================================
-   Utility Classes
-   =================================== */
-.bg-light {
-  background-color: var(--bg-light) !important;
-}
-
-.text-primary {
-  color: var(--primary-color) !important;
-}
-
-/* ===================================
-   Responsive Design
-   =================================== */
+    Responsive Design
+    =================================== */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -704,6 +828,21 @@ footer {
     height: 200px;
   }
   
+  /* CSS Logo responsive */
+  .css-logo {
+    font-size: 24px;
+  }
+  
+  .css-logo-footer {
+    font-size: 32px;
+  }
+  
+  .logo-tagline {
+    font-size: 10px;
+    max-width: 220px;
+    letter-spacing: 0.3px;
+  }
+  
   .whatsapp-float {
     width: 50px;
     height: 50px;
@@ -712,8 +851,16 @@ footer {
     right: 20px;
   }
   
-  .back-to-top {
+  .viber-float {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
     bottom: 80px;
+    right: 20px;
+  }
+  
+  .back-to-top {
+    bottom: 150px;
     right: 20px;
     width: 45px;
     height: 45px;
@@ -741,18 +888,75 @@ footer {
   }
 }
 
-/* ===================================
-   Loading Animation
-   =================================== */
-.fade-in {
-  animation: fadeIn 0.6s ease;
+/* Gallery Styles */
+.gallery-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.gallery-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
+
+.gallery-link img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-link:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-link:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* Video Gallery Styles */
+.video-item {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.video-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: center;
+}
+
