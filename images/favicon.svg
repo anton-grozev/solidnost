@@ -1,4 +1,4 @@
-<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="geometricPrecision">
   <defs>
     <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#002f4d;stop-opacity:1" />
@@ -6,25 +6,25 @@
     </linearGradient>
   </defs>
   
-  <!-- Industrial gear element - improved and sharper for favicon -->
-  <g id="gear">
-    <!-- Main gear circle -->
-    <circle cx="256" cy="256" r="180" fill="url(#faviconGradient)" stroke="#002f4d" stroke-width="8"/>
+  <!-- Industrial gear element - enhanced high-resolution version -->
+  <g id="gear" shape-rendering="geometricPrecision">
+    <!-- Main gear circle with enhanced border -->
+    <circle cx="256" cy="256" r="185" fill="url(#faviconGradient)" stroke="#002f4d" stroke-width="10"/>
     
-    <!-- Gear teeth - improved with better proportions -->
-    <path d="M 256 50 L 276 88 L 236 88 Z" fill="#002f4d"/>
-    <path d="M 388.4 109.2 L 378.4 147 L 340.6 129 Z" fill="#002f4d"/>
-    <path d="M 449.4 240.6 L 411.6 250.6 L 411.6 210.8 Z" fill="#002f4d"/>
-    <path d="M 449.4 271.4 L 411.6 261.4 L 411.6 301.2 Z" fill="#002f4d"/>
-    <path d="M 388.4 402.8 L 378.4 365 L 340.6 383 Z" fill="#002f4d"/>
-    <path d="M 256 462 L 276 424 L 236 424 Z" fill="#002f4d"/>
-    <path d="M 123.6 402.8 L 133.6 365 L 171.4 383 Z" fill="#002f4d"/>
-    <path d="M 62.6 271.4 L 100.4 261.4 L 100.4 301.2 Z" fill="#002f4d"/>
-    <path d="M 62.6 240.6 L 100.4 250.6 L 100.4 210.8 Z" fill="#002f4d"/>
-    <path d="M 123.6 109.2 L 133.6 147 L 171.4 129 Z" fill="#002f4d"/>
+    <!-- Gear teeth - enhanced with better proportions and symmetry -->
+    <path d="M 256 45 L 280 88 L 232 88 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 394 104 L 381 150 L 338 127 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 456 238 L 408 252 L 408 208 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 456 274 L 408 260 L 408 304 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 394 408 L 381 362 L 338 385 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 256 467 L 280 424 L 232 424 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 118 408 L 131 362 L 174 385 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 56 274 L 104 260 L 104 304 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 56 238 L 104 252 L 104 208 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
+    <path d="M 118 104 L 131 150 L 174 127 Z" fill="#002f4d" shape-rendering="geometricPrecision"/>
     
-    <!-- Inner circle -->
-    <circle cx="256" cy="256" r="80" fill="#002f4d" stroke="#0066cc" stroke-width="6"/>
-    <circle cx="256" cy="256" r="40" fill="white"/>
+    <!-- Inner circles with enhanced contrast -->
+    <circle cx="256" cy="256" r="85" fill="#002f4d" stroke="#0066cc" stroke-width="8"/>
+    <circle cx="256" cy="256" r="45" fill="#ffffff" stroke="#002f4d" stroke-width="3"/>
   </g>
 </svg>
