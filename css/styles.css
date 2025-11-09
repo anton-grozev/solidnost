@@ -93,21 +93,115 @@ img {
   transition: all 0.3s ease;
 }
 
+/* ===================================
+   CSS Text Logo - Exact replica of original
+   =================================== */
+.css-logo {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px 5px 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* Yellow gradient fill */
+  background: linear-gradient(180deg, #FFED4E 0%, #FFD700 50%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Black outline shadow */
+  filter: 
+    drop-shadow(-2px -2px 0 #000)
+    drop-shadow(2px -2px 0 #000)
+    drop-shadow(-2px 2px 0 #000)
+    drop-shadow(2px 2px 0 #000)
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.css-logo-footer {
+  font-size: 42px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 5px 15px 5px 5px;
+}
+
+/* Logo tagline */
+.logo-tagline {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 4px;
+  max-width: 320px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.navbar-brand {
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.navbar-brand:hover .css-logo {
+  filter: 
+    drop-shadow(-2px -2px 0 #000)
+    drop-shadow(2px -2px 0 #000)
+    drop-shadow(-2px 2px 0 #000)
+    drop-shadow(2px 2px 0 #000)
+    drop-shadow(0 0 4px rgba(0, 0, 0, 0.7));
+}
+
 .navbar-brand img {
   height: 50px;
   width: auto;
   transition: transform 0.3s ease;
-  /* Оптимизация за SVG и PNG */
-  image-rendering: auto;
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
+}
+
+/* Специална оптимизация за PNG логото */
+.logo-img {
+  /* Retina оптимизация - показва по-голямо изображение в по-малък размер */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  
+  /* Anti-aliasing за плавни краища */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  filter: contrast(1.05);
+  
+  /* Backface visibility за по-добро рендериране */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Transform за подобрено качество */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  
+  /* Филтри за подобрено качество */
+  filter: contrast(1.1) brightness(1.02);
+  -webkit-filter: contrast(1.1) brightness(1.02);
+  
+  /* Премахване на размазване */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  
+  /* За по-остри краища */
+  -ms-interpolation-mode: bicubic;
 }
 
 .navbar-brand:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(0);
 }
 
 .navbar-nav .nav-link {
@@ -517,14 +611,28 @@ img {
 }
 
 /* Footer logo optimization */
-.contact-info img,
-footer img {
-  image-rendering: auto;
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
+.contact-info .logo-img,
+footer .logo-img {
+  /* Retina display оптимизация */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  filter: contrast(1.05);
+  
+  /* 3D transform за по-добро качество */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Филтри за изчистване */
+  filter: contrast(1.1) brightness(1.02) saturate(1.05);
+  -webkit-filter: contrast(1.1) brightness(1.02) saturate(1.05);
+  
+  /* Премахване на размазване */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* SVG global optimization */
@@ -702,6 +810,21 @@ footer {
   
   .product-image {
     height: 200px;
+  }
+  
+  /* CSS Logo responsive */
+  .css-logo {
+    font-size: 24px;
+  }
+  
+  .css-logo-footer {
+    font-size: 32px;
+  }
+  
+  .logo-tagline {
+    font-size: 10px;
+    max-width: 220px;
+    letter-spacing: 0.3px;
   }
   
   .whatsapp-float {
