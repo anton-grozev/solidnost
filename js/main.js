@@ -228,9 +228,48 @@
     }
   });
 
-
-
-
+  // Set active navigation item based on current page
+  function setActiveNavItem() {
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
+    // Remove all active classes first
+    $('.navbar-nav .nav-link').removeClass('active');
+    
+    // Set active class based on current page
+    $('.navbar-nav .nav-link').each(function() {
+      const href = $(this).attr('href');
+      
+      if (href) {
+        const linkPage = href.split('/').pop();
+        
+        // Check if current page matches
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === 'index.html' && href === '../index.html')) {
+          $(this).addClass('active');
+        }
+        
+        // Check for dropdown items
+        if ($(this).hasClass('dropdown-toggle')) {
+          const dropdownItems = $(this).next('.dropdown-menu').find('.dropdown-item');
+          dropdownItems.each(function() {
+            const dropdownHref = $(this).attr('href');
+            if (dropdownHref) {
+              const dropdownPage = dropdownHref.split('/').pop();
+              if (dropdownPage === currentPage) {
+                $(this).addClass('active');
+                $(this).closest('.nav-item').find('.dropdown-toggle').addClass('active');
+              }
+            }
+          });
+        }
+      }
+    });
+  }
+  
+  // Call on page load
+  setActiveNavItem();
 
 })(jQuery);
 
