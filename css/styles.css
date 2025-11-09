@@ -211,11 +211,11 @@ img {
 }
 
 .slide-1 {
-  background-image: url('../images/hero-bg-1.jpg');
+  background-image: linear-gradient(rgba(0, 47, 77, 0.7), rgba(0, 47, 77, 0.7)), url('../images/km7000.jpg');
 }
 
 .slide-2 {
-  background-image: url('../images/hero-bg-2.jpg');
+  background-image: linear-gradient(rgba(0, 102, 204, 0.7), rgba(0, 47, 77, 0.7)), url('../images/km4001pe.jpg');
 }
 
 .hero-content {
@@ -407,30 +407,22 @@ img {
   border-color: var(--secondary-color);
 }
 
-.service-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  transition: all 0.3s ease;
+.service-image {
+  max-width: 250px;
+  margin: 0 auto 1rem;
 }
 
-.service-card:hover .service-icon {
-  transform: rotateY(360deg);
-}
-
-.service-icon i {
-  font-size: 2rem;
-  color: white;
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .service-card h3 {
   color: var(--primary-color);
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .service-card p {

@@ -201,7 +201,7 @@
     // Add Google Analytics code here
     // Example:
     // gtag('config', 'GA_MEASUREMENT_ID');
-    console.log('Analytics initialized');
+    // console.log('Analytics initialized'); // Removed for production
   }
 
   // ===================================
@@ -345,32 +345,34 @@
   };
 
   // ===================================
-  // Console Welcome Message
+  // Console Welcome Message (Development only)
   // ===================================
-  console.log(
-    '%c👋 Здравейте от Солидност! ',
-    'background: #002f4d; color: white; font-size: 20px; padding: 10px;'
-  );
-  console.log(
-    '%cИнтересувате ли се от сътрудничество? Свържете се с нас: office@solidnost.com',
-    'font-size: 14px; color: #0066cc;'
-  );
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.log(
+      '%c👋 Здравейте от Солидност! ',
+      'background: #002f4d; color: white; font-size: 20px; padding: 10px;'
+    );
+    console.log(
+      '%cИнтересувате ли се от сътрудничество? Свържете се с нас: office@solidnost.com',
+      'font-size: 14px; color: #0066cc;'
+    );
+  }
 
 })(jQuery);
 
 // ===================================
 // Service Worker Registration (PWA)
 // ===================================
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    // Uncomment when you create a service worker file
-    // navigator.serviceWorker.register('/sw.js').then(
-    //   function(registration) {
-    //     console.log('ServiceWorker registration successful');
-    //   },
-    //   function(err) {
-    //     console.log('ServiceWorker registration failed: ', err);
-    //   }
-    // );
-  });
-}
+// Service Worker registration commented out until PWA implementation
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker.register('/sw.js').then(
+//       function(registration) {
+//         console.log('ServiceWorker registration successful');
+//       },
+//       function(err) {
+//         console.log('ServiceWorker registration failed: ', err);
+//       }
+//     );
+//   });
+// }
