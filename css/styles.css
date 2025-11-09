@@ -96,6 +96,9 @@ img {
 .navbar-brand img {
   height: 50px;
   transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .navbar-brand:hover img {

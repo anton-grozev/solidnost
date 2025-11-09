@@ -1,0 +1,41 @@
+<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#002f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Industrial gear element -->
+  <g id="gear">
+    <!-- Main gear circle -->
+    <circle cx="40" cy="40" r="18" fill="#0066cc"/>
+    
+    <!-- Gear teeth -->
+    <path d="M 40 18 L 42 22 L 38 22 Z" fill="#002f4d"/>
+    <path d="M 51.7 24.3 L 50.7 28 L 47.5 26 Z" fill="#002f4d"/>
+    <path d="M 57.7 35.7 L 54 36.7 L 54 32.5 Z" fill="#002f4d"/>
+    <path d="M 57.7 44.3 L 54 43.3 L 54 47.5 Z" fill="#002f4d"/>
+    <path d="M 51.7 55.7 L 50.7 52 L 47.5 54 Z" fill="#002f4d"/>
+    <path d="M 40 62 L 42 58 L 38 58 Z" fill="#002f4d"/>
+    <path d="M 28.3 55.7 L 29.3 52 L 32.5 54 Z" fill="#002f4d"/>
+    <path d="M 22.3 44.3 L 26 43.3 L 26 47.5 Z" fill="#002f4d"/>
+    <path d="M 22.3 35.7 L 26 36.7 L 26 32.5 Z" fill="#002f4d"/>
+    <path d="M 28.3 24.3 L 29.3 28 L 32.5 26 Z" fill="#002f4d"/>
+    
+    <!-- Inner circle -->
+    <circle cx="40" cy="40" r="8" fill="#002f4d"/>
+    <circle cx="40" cy="40" r="4" fill="white"/>
+  </g>
+  
+  <!-- Company name "СОЛИДНОСТ" -->
+  <text x="85" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#blueGradient)">
+    СОЛИДНОСТ
+  </text>
+  
+  <!-- Subtle tagline or accent line -->
+  <line x1="85" y1="58" x2="285" y2="58" stroke="#0066cc" stroke-width="2"/>
+  <text x="85" y="72" font-family="Arial, sans-serif" font-size="10" fill="#002f4d" letter-spacing="2">
+    ПРОИЗВОДСТВО НА МАШИНИ
+  </text>
+</svg>
