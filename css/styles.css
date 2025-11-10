@@ -589,7 +589,7 @@ img {
 .contact-form .form-label {
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: var(--text-dark);
+  color: #ffffff;
 }
 
 .contact-form .form-select option {
@@ -599,7 +599,7 @@ img {
 
 .contact-info p {
   margin-bottom: 0.75rem;
-  color: var(--text-dark);
+  color: #ffffff;
   font-size: 1.05rem;
 }
 
