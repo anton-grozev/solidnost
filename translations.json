@@ -65,6 +65,46 @@
       "service2": "Основен ремонт на вносни машини",
       "service3": "Дребни ремонти и центровки при клиента"
     },
+    "services_page": {
+      "title": "Сервизни услуги",
+      "subtitle": "Професионални услуги за ремонт и поддръжка на кантослепващи машини",
+      "service1_title": "Ремонт с оригинални части",
+      "service1_desc": "Ремонт на собствени машини с оригинални части и гаранция за качество. Бърза диагностика и професионално обслужване.",
+      "service2_title": "Основен ремонт на вносни машини",
+      "service2_desc": "Професионален ремонт и поддръжка на внесени кантослепващи машини. Работим с всички марки и модели.",
+      "service3_title": "Дребни ремонти при клиента",
+      "service3_desc": "Извършваме ремонти и настройки на място при клиента. Бърза реакция и качествено обслужване.",
+      "includes_title": "Нашите услуги включват:",
+      "includes1": "Диагностика и отстраняване на неизправности",
+      "includes2": "Подмяна на износени части",
+      "includes3": "Профилактика и превантивна поддръжка",
+      "includes4": "Модернизация на стари машини",
+      "includes5": "Консултации и техническа поддръжка",
+      "includes6": "Доставка на резервни части"
+    },
+    "secondhand_page": {
+      "title": "Машини втора употреба",
+      "subtitle": "Качествени използвани кантослепващи машини на достъпни цени",
+      "section_title": "Предлагаме машини втора употреба",
+      "intro": "Всички предлагани от нас машини втора употреба са преминали цялостна проверка и са в отлично работно състояние.",
+      "no_stock": "Моментално няма налични машини.",
+      "no_stock_text": "За информация за бъдещи оферти, моля свържете се с нас на:",
+      "contact_title": "Свържете се с нас:",
+      "advantages_title": "Предимства на машините втора употреба:",
+      "advantage1": "Много по-ниска цена от нова машина",
+      "advantage2": "Проверено работно състояние",
+      "advantage3": "Гаранция за качество",
+      "advantage4": "Възможност за модернизация",
+      "advantage5": "Бърза доставка"
+    },
+    "gallery_page": {
+      "title": "Галерия",
+      "subtitle": "Снимки на нашите машини и производство"
+    },
+    "video_gallery_page": {
+      "title": "Видео галерия",
+      "subtitle": "Видео клипове на нашите машини в действие"
+    },
     "contact": {
       "title": "Въпроси и поръчки",
       "name": "Вашето име",
@@ -77,6 +117,10 @@
       "subject_product": "Информация за продукт",
       "subject_service": "Сервизни услуги",
       "subject_quote": "Искане за оферта",
+      "placeholder_name": "Напишете вашето име...",
+      "placeholder_email": "example@email.com",
+      "placeholder_phone": "Напишете вашия телефон...",
+      "placeholder_message": "Напишете вашето съобщение тук...",
       "info_title": "Информация",
       "contacts_title": "Контакти",
       "machines_link": "Кантослепващи машини",
@@ -87,7 +131,8 @@
       "address": "гр. Русе, бул. Тутракан №20"
     },
     "footer": {
-      "rights": "Всички права запазени."
+      "rights": "Всички права запазени.",
+      "city": "Русе"
     },
     "cookie": {
       "message": "Този сайт използва бисквитки за подобряване на потребителското изживяване.",
@@ -180,6 +225,46 @@
       "service2": "Major repairs of imported machines",
       "service3": "Minor repairs and adjustments at client's location"
     },
+    "services_page": {
+      "title": "Service",
+      "subtitle": "Professional repair and maintenance services for edgebanding machines",
+      "service1_title": "Repairs with Original Parts",
+      "service1_desc": "Repair of own machines with original parts and quality guarantee. Fast diagnostics and professional service.",
+      "service2_title": "Major Repairs of Imported Machines",
+      "service2_desc": "Professional repair and maintenance of imported edgebanding machines. We work with all brands and models.",
+      "service3_title": "Minor Repairs at Client's Location",
+      "service3_desc": "We perform repairs and adjustments on-site at client's location. Quick response and quality service.",
+      "includes_title": "Our services include:",
+      "includes1": "Diagnostics and troubleshooting",
+      "includes2": "Replacement of worn parts",
+      "includes3": "Preventive maintenance",
+      "includes4": "Modernization of old machines",
+      "includes5": "Consultations and technical support",
+      "includes6": "Supply of spare parts"
+    },
+    "secondhand_page": {
+      "title": "Used Machines",
+      "subtitle": "Quality used edgebanding machines at affordable prices",
+      "section_title": "We offer used machines",
+      "intro": "All used machines we offer have undergone complete inspection and are in excellent working condition.",
+      "no_stock": "Currently no machines available.",
+      "no_stock_text": "For information about future offers, please contact us at:",
+      "contact_title": "Contact us:",
+      "advantages_title": "Advantages of used machines:",
+      "advantage1": "Much lower price than a new machine",
+      "advantage2": "Verified working condition",
+      "advantage3": "Quality guarantee",
+      "advantage4": "Possibility for modernization",
+      "advantage5": "Fast delivery"
+    },
+    "gallery_page": {
+      "title": "Gallery",
+      "subtitle": "Photos of our machines and production"
+    },
+    "video_gallery_page": {
+      "title": "Video Gallery",
+      "subtitle": "Video clips of our machines in action"
+    },
     "contact": {
       "title": "Questions and Orders",
       "name": "Your Name",
@@ -192,6 +277,10 @@
       "subject_product": "Product Information",
       "subject_service": "Service",
       "subject_quote": "Quote Request",
+      "placeholder_name": "Enter your name...",
+      "placeholder_email": "example@email.com",
+      "placeholder_phone": "Enter your phone number...",
+      "placeholder_message": "Enter your message here...",
       "info_title": "Information",
       "contacts_title": "Contacts",
       "machines_link": "Edgebanding Machines",
@@ -202,7 +291,8 @@
       "address": "Ruse, Bulgaria, Tutrakan blvd. №20"
     },
     "footer": {
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "city": "Ruse"
     },
     "cookie": {
       "message": "This site uses cookies to improve user experience.",

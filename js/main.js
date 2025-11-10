@@ -102,6 +102,26 @@
       }
     });
 
+    // Update all elements with data-i18n-placeholder attribute
+    $('[data-i18n-placeholder]').each(function() {
+      const key = $(this).data('i18n-placeholder');
+      const keys = key.split('.');
+      let value = t;
+      
+      // Navigate through nested object
+      for (let k of keys) {
+        if (value && value[k]) {
+          value = value[k];
+        } else {
+          console.warn('Translation key not found:', key);
+          return;
+        }
+      }
+      
+      // Update placeholder
+      $(this).attr('placeholder', value);
+    });
+
     // Update document language attribute
     $('html').attr('lang', lang);
   }

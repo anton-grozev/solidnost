@@ -350,15 +350,15 @@
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="name" class="form-label" data-i18n="contact.name">Вашето име</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="contact.placeholder_name" placeholder="Напишете вашето име..." required>
               </div>
               <div class="col-md-6">
                 <label for="email" class="form-label" data-i18n="contact.email">Вашият e-mail *</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="email" data-i18n-placeholder="contact.placeholder_email" placeholder="example@email.com" required>
               </div>
               <div class="col-md-6">
                 <label for="phone" class="form-label" data-i18n="contact.phone">Вашият телефон *</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
+                <input type="tel" class="form-control" id="phone" name="phone" data-i18n-placeholder="contact.placeholder_phone" placeholder="Напишете вашия телефон..." required>
               </div>
               <div class="col-md-6">
                 <label for="subject" class="form-label" data-i18n="contact.subject">Относно</label>
@@ -371,7 +371,7 @@
               </div>
               <div class="col-12">
                 <label for="message" class="form-label" data-i18n="contact.message">Вашият въпрос/поръчка</label>
-                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="4" data-i18n-placeholder="contact.placeholder_message" placeholder="Напишете вашето съобщение тук..."></textarea>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary btn-lg">
@@ -397,7 +397,7 @@
             </div>
             <div class="col-md-6 mb-4">
               <h3 class="h5 mb-3" data-i18n="contact.contacts_title">Контакти</h3>
-              <div class="css-logo css-logo-footer">СОЛИДНОСТ</div>
+              <div class="css-logo css-logo-footer" data-i18n="brand.name">СОЛИДНОСТ</div>
               <div class="contact-info">
                 <p><i class="fas fa-map-marker-alt me-2"></i> <span data-i18n="contact.address">гр. Русе, бул. Тутракан №20</span></p>
                 <p><i class="fas fa-phone me-2"></i> <a href="tel:+359888227352" class="text-white">+359 888 227 352</a></p>
@@ -418,7 +418,7 @@
   <!-- Footer -->
   <footer class="bg-black text-white text-center py-3">
     <div class="container">
-      <p class="mb-0"><strong>"Солидност" - Русе</strong> © 2025. <span data-i18n="footer.rights">Всички права запазени.</span></p>
+  <p class="mb-0"><strong><span data-i18n="brand.name">Солидност</span> - <span data-i18n="footer.city">Русе</span></strong> © 2025. <span data-i18n="footer.rights">Всички права запазени.</span></p>
     </div>
   </footer>
 

@@ -80,10 +80,10 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
-          <p class="mb-0">Този сайт използва бисквитки за подобряване на потребителското изживяване. <a href="#privacy" class="text-white text-decoration-underline">Научете повече</a></p>
+          <p class="mb-0"><span data-i18n="cookie.message">Този сайт използва бисквитки за подобряване на потребителското изживяване.</span> <a href="#privacy" class="text-white text-decoration-underline" data-i18n="cookie.learn_more">Научете повече</a></p>
         </div>
         <div class="col-md-4 text-end">
-          <button onclick="acceptCookies()" class="btn btn-light btn-sm">Приемам</button>
+          <button onclick="acceptCookies()" class="btn btn-light btn-sm" data-i18n="cookie.accept">Приемам</button>
         </div>
       </div>
     </div>
@@ -93,12 +93,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">
-        <div class="css-logo">СОЛИДНОСТ</div>
-        <div class="logo-tagline">Производство и ремонт на кантослепващи машини</div>
+        <div class="css-logo" data-i18n="brand.name">СОЛИДНОСТ</div>
+        <div class="logo-tagline" data-i18n="brand.tagline">Производство и ремонт на кантослепващи машини</div>
       </a>
       <div class="top-phone d-lg-none">
         <a href="tel:+359888227352">
-          <i class="fas fa-phone"></i> +359 888 227 352
+          <i class="fas fa-phone"></i> <span data-i18n="nav.phone">+359 888 227 352</span>
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,33 +107,40 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">НАЧАЛО</a>
+            <a class="nav-link" href="../index.html" data-i18n="nav.home">НАЧАЛО</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kantoslepvashti-mashini.html">КАНТОСЛЕПВАЩИ МАШИНИ</a>
+            <a class="nav-link" href="kantoslepvashti-mashini.html" data-i18n="nav.machines">КАНТОСЛЕПВАЩИ МАШИНИ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="servizni-uslugi.html">СЕРВИЗНИ УСЛУГИ</a>
+            <a class="nav-link" href="servizni-uslugi.html" data-i18n="nav.services">СЕРВИЗНИ УСЛУГИ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="vtora-upotreba.html">ВТОРА УПОТРЕБА</a>
+            <a class="nav-link" href="vtora-upotreba.html" data-i18n="nav.secondhand">ВТОРА УПОТРЕБА</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.gallery">
               ГАЛЕРИЯ
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="galeria.html">СНИМКИ</a></li>
-              <li><a class="dropdown-item" href="video-galeria.html">ВИДЕО ГАЛЕРИЯ</a></li>
+              <li><a class="dropdown-item" href="galeria.html" data-i18n="nav.photos">СНИМКИ</a></li>
+              <li><a class="dropdown-item" href="video-galeria.html" data-i18n="nav.videos">ВИДЕО ГАЛЕРИЯ</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kontakti.html">КОНТАКТИ</a>
+            <a class="nav-link" href="kontakti.html" data-i18n="nav.contacts">КОНТАКТИ</a>
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link phone-link" href="tel:+359888227352">
-              <i class="fas fa-phone"></i> +359 888 227 352
+              <i class="fas fa-phone"></i> <span data-i18n="nav.phone">+359 888 227 352</span>
             </a>
+          </li>
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="bg">BG</button>
+              <span class="lang-separator">|</span>
+              <button class="lang-btn" data-lang="en">EN</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -143,8 +150,8 @@
 
   <section class="py-5 bg-primary text-white">
     <div class="container">
-      <h1 class="display-4 mb-3">Контакти</h1>
-      <p class="lead">Свържете се с нас за консултация или поръчка</p>
+      <h1 class="display-4 mb-3" data-i18n="contact_page.title">Контакти</h1>
+      <p class="lead" data-i18n="contact_page.subtitle">Свържете се с нас за консултация или поръчка</p>
     </div>
   </section>
 
@@ -152,53 +159,53 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-6">
-          <h2 class="mb-4">Информация за контакт</h2>
+          <h2 class="mb-4" data-i18n="contact_page.info_title">Информация за контакт</h2>
           <div class="contact-info mb-4">
-            <h3 class="h5 mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i>Адрес:</h3>
-            <p class="ms-4">гр. Русе<br>бул. Тутракан №20</p>
+            <h3 class="h5 mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i><span data-i18n="contact_page.address_label">Адрес:</span></h3>
+            <p class="ms-4"><span data-i18n="footer.city">гр. Русе</span><br><span data-i18n="footer.address">бул. Тутракан №20</span></p>
           </div>
           
           <div class="contact-info mb-4">
-            <h3 class="h5 mb-3"><i class="fas fa-phone text-primary me-2"></i>Телефон:</h3>
+            <h3 class="h5 mb-3"><i class="fas fa-phone text-primary me-2"></i><span data-i18n="contact_page.phone_label">Телефон:</span></h3>
             <p class="ms-4"><a href="tel:+359888227352" class="text-white">+359 888 227 352</a></p>
           </div>
           
           <div class="contact-info mb-4">
-            <h3 class="h5 mb-3"><i class="fas fa-envelope text-primary me-2"></i>Имейл:</h3>
+            <h3 class="h5 mb-3"><i class="fas fa-envelope text-primary me-2"></i><span data-i18n="contact_page.email_label">Имейл:</span></h3>
             <p class="ms-4"><a href="mailto:office@solidnost.com" class="text-white">office@solidnost.com</a></p>
           </div>
         </div>
         
         <div class="col-lg-6">
-          <h2 class="mb-4">Изпратете запитване</h2>
+          <h2 class="mb-4" data-i18n="contact_page.form_title">Изпратете запитване</h2>
           <form id="contactForm" class="contact-form">
             <div class="mb-3">
-              <label for="name" class="form-label">Вашето име</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Иван Петров">
+              <label for="name" class="form-label" data-i18n="contact.name">Вашето име</label>
+              <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="contact.placeholder_name" placeholder="Напишете вашето име...">
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Вашият e-mail *</label>
-              <input type="email" class="form-control" id="email" name="email" required placeholder="ivan@example.com">
+              <label for="email" class="form-label" data-i18n="contact.email">Вашият e-mail *</label>
+              <input type="email" class="form-control" id="email" name="email" required data-i18n-placeholder="contact.placeholder_email" placeholder="example@email.com">
             </div>
             <div class="mb-3">
-              <label for="phone" class="form-label">Вашият телефон *</label>
-              <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+359 888 123 456">
+              <label for="phone" class="form-label" data-i18n="contact.phone">Вашият телефон *</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required data-i18n-placeholder="contact.placeholder_phone" placeholder="Напишете вашия телефон...">
             </div>
             <div class="mb-3">
-              <label for="subject" class="form-label">Относно</label>
+              <label for="subject" class="form-label" data-i18n="contact.subject">Относно</label>
               <select class="form-select" id="subject" name="subject">
-                <option value="general">Общ въпрос</option>
-                <option value="product">Информация за продукт</option>
-                <option value="service">Сервизни услуги</option>
-                <option value="quote">Искане за оферта</option>
+                <option value="general" data-i18n="contact.subject_general">Общ въпрос</option>
+                <option value="product" data-i18n="contact.subject_product">Информация за продукт</option>
+                <option value="service" data-i18n="contact.subject_service">Сервизни услуги</option>
+                <option value="quote" data-i18n="contact.subject_quote">Искане за оферта</option>
               </select>
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label">Вашият въпрос/поръчка</label>
-              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Напишете вашето съобщение тук..."></textarea>
+              <label for="message" class="form-label" data-i18n="contact.message">Вашият въпрос/поръчка</label>
+              <textarea class="form-control" id="message" name="message" rows="4" data-i18n-placeholder="contact.placeholder_message" placeholder="Напишете вашето съобщение тук..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">
-              <i class="fas fa-paper-plane me-2"></i>Изпрати
+              <i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.send">Изпрати</span>
             </button>
           </form>
           <div id="formMessage" class="mt-3"></div>
@@ -211,7 +218,7 @@
 <!-- Footer -->
   <footer class="bg-black text-white text-center py-3">
     <div class="container">
-      <p class="mb-0"><strong>"Солидност" - Русе</strong> © 2025. Всички права запазени.</p>
+      <p class="mb-0"><strong>"<span data-i18n="brand.name">Солидност</span>" - <span data-i18n="footer.city">Русе</span></strong> © 2025. <span data-i18n="footer.rights">Всички права запазени</span>.</p>
     </div>
   </footer>
 
