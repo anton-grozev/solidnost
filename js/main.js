@@ -2,7 +2,14 @@
 (function($) {
   'use strict';
 
+  // Language translations object
+  let translations = {};
+  let currentLang = localStorage.getItem('language') || 'bg';
+
   $(document).ready(function() {
+    
+    // Initialize Language System
+    initLanguage();
     
     // Initialize Owl Carousel
     initCarousel();
@@ -26,6 +33,103 @@
     animateOnScroll();
     
   });
+
+  // Language System
+  function initLanguage() {
+    // Load translations
+    $.getJSON('../translations.json')
+      .done(function(data) {
+        translations = data;
+        updateLanguage(currentLang);
+        updateLanguageButtons();
+      })
+      .fail(function() {
+        // Fallback for root directory
+        $.getJSON('translations.json')
+          .done(function(data) {
+            translations = data;
+            updateLanguage(currentLang);
+            updateLanguageButtons();
+          })
+          .fail(function() {
+            console.error('Failed to load translations');
+          });
+      });
+
+    // Language switcher click handlers
+    $(document).on('click', '.lang-btn', function() {
+      const lang = $(this).data('lang');
+      if (lang && lang !== currentLang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        updateLanguage(lang);
+        updateLanguageButtons();
+      }
+    });
+  }
+
+  function updateLanguage(lang) {
+    if (!translations[lang]) {
+      console.error('Language not found:', lang);
+      return;
+    }
+
+    const t = translations[lang];
+
+    // Update all elements with data-i18n attribute
+    $('[data-i18n]').each(function() {
+      const key = $(this).data('i18n');
+      const keys = key.split('.');
+      let value = t;
+      
+      // Navigate through nested object
+      for (let k of keys) {
+        if (value && value[k]) {
+          value = value[k];
+        } else {
+          console.warn('Translation key not found:', key);
+          return;
+        }
+      }
+      
+      // Update element
+      if ($(this).is('input, textarea')) {
+        $(this).attr('placeholder', value);
+      } else if ($(this).data('i18n-html')) {
+        $(this).html(value);
+      } else {
+        $(this).text(value);
+      }
+    });
+
+    // Update all elements with data-i18n-placeholder attribute
+    $('[data-i18n-placeholder]').each(function() {
+      const key = $(this).data('i18n-placeholder');
+      const keys = key.split('.');
+      let value = t;
+      
+      // Navigate through nested object
+      for (let k of keys) {
+        if (value && value[k]) {
+          value = value[k];
+        } else {
+          console.warn('Translation key not found:', key);
+          return;
+        }
+      }
+      
+      // Update placeholder
+      $(this).attr('placeholder', value);
+    });
+
+    // Update document language attribute
+    $('html').attr('lang', lang);
+  }
+
+  function updateLanguageButtons() {
+    $('.lang-btn').removeClass('active');
+    $('.lang-btn[data-lang="' + currentLang + '"]').addClass('active');
+  }
 
   function initCarousel() {
     if ($('.owl-carousel').length) {
