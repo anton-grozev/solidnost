@@ -1,0 +1,232 @@
+{
+  "bg": {
+    "brand": {
+      "name": "СОЛИДНОСТ",
+      "tagline": "Производство и ремонт на кантослепващи машини"
+    },
+    "nav": {
+      "home": "НАЧАЛО",
+      "machines": "КАНТОСЛЕПВАЩИ МАШИНИ",
+      "services": "СЕРВИЗНИ УСЛУГИ",
+      "secondhand": "ВТОРА УПОТРЕБА",
+      "gallery": "ГАЛЕРИЯ",
+      "photos": "СНИМКИ",
+      "videos": "ВИДЕО ГАЛЕРИЯ",
+      "contacts": "КОНТАКТИ",
+      "phone": "+359 888 227 352"
+    },
+    "hero": {
+      "title1": "Производство на кантослепващи машини",
+      "subtitle1": "За мебелната промишленост от 1994 година",
+      "cta1": "Разгледайте продуктите",
+      "title2": "Нашите топ предложения",
+      "subtitle2": "Качество и надеждност на достъпна цена",
+      "cta2": "Вижте повече"
+    },
+    "products": {
+      "title": "Топ продукти",
+      "viewDetails": "Виж детайли",
+      "km7000_desc": "Снимката е примерна. Машините с подавателен апарат се договарят индивидуално с всеки клиент за агрегатите които желае да се монтират.",
+      "km4001pe_desc": "Обмазва само кантовата лента; удобна за праволинейно и криволинейно кантиране; лепи кантови ленти с дебелина от 0,40 до 2 мм.",
+      "km900m_desc": "Уникална кантослепваща машина, която може да олепилява или кантовата лента, или ПДЧ-то; удобна за праволинейно и криволинейно кантиране.",
+      "km2015tpm_desc": "Лепи всички видове кантови ленти от 0,3 до 2 мм; обмазва само дървесния детайл; работна скорост - 8,4 м/мин."
+    },
+    "about": {
+      "title": "За нас",
+      "intro": "От 1994 г. фирмата е утвърден български производител на <strong>кантослепващи машини</strong>, съоръжения и нестандартно оборудване в сферата на мебелното производство.",
+      "paragraph1": "Кантослепващата машина (или неправилно разпространения термин кантираща машина) служи за залепване на кантови ленти към дървесни или ПВЦ плоскости.",
+      "paragraph2": "Машините се произвеждат по поръчка според нуждите на всеки клиент.",
+      "paragraph3": "Високото качество на продуктите ни и спазването на договорените срокове са един от приоритетите на фирмата ни. С дългогодишния си опит, както и непрекъснатия стремеж да разширяваме своите знания, ние успяваме да удовлетворим изискванията на нашите клиенти като им предлагаме конкурентни продукти и услуги с постоянно високо качество на приемлива цена.",
+      "offers_title": "Фирмата предлага:",
+      "additional_title": "Допълнително:",
+      "offer1": "Консултация за разработване на изискванията към продукта",
+      "offer2": "Конструктивно и функционално проектиране",
+      "offer3": "Конструиране и изработка",
+      "offer4": "Тестване на готовото изделие",
+      "offer5": "Доставка и обучение на персонала",
+      "offer6": "Коректни срокове при договаряне",
+      "offer7": "Качество и надеждност на изделието",
+      "offer8": "Използване на материали с високо качество",
+      "offer9": "Квалифициран персонал",
+      "additional1": "Пълна гаранция на произведеното",
+      "additional2": "Гаранционно и следгаранционо техническо обслужване",
+      "additional3": "Изпълняване на нестандартни поръчки",
+      "additional4": "Усъвършенстване и модернизация на съществуващи машини",
+      "additional5": "Създаване на нови продукти",
+      "additional6": "Цялата гама от резервни части",
+      "additional7": "Изработване на детайли, части и възли",
+      "additional8": "Ремонти на други машини",
+      "additional9": "Лоялност и коректност",
+      "export_note": "При износ на кантослепваща машина издаваме сертификат EURO 1 и осигуряваме необходимата митническа документация."
+    },
+    "services": {
+      "title": "Услуги",
+      "service1": "Ремонт с оригинални части на собствени машини",
+      "service2": "Основен ремонт на вносни машини",
+      "service3": "Дребни ремонти и центровки при клиента"
+    },
+    "contact": {
+      "title": "Въпроси и поръчки",
+      "name": "Вашето име",
+      "email": "Вашият e-mail *",
+      "phone": "Вашият телефон *",
+      "subject": "Относно",
+      "message": "Вашият въпрос/поръчка",
+      "send": "Изпрати",
+      "subject_general": "Общ въпрос",
+      "subject_product": "Информация за продукт",
+      "subject_service": "Сервизни услуги",
+      "subject_quote": "Искане за оферта",
+      "info_title": "Информация",
+      "contacts_title": "Контакти",
+      "machines_link": "Кантослепващи машини",
+      "services_link": "Сервизни услуги",
+      "secondhand_link": "Машини втора употреба",
+      "gallery_link": "Галерия",
+      "contacts_link": "Контакти",
+      "address": "гр. Русе, бул. Тутракан №20"
+    },
+    "footer": {
+      "rights": "Всички права запазени."
+    },
+    "cookie": {
+      "message": "Този сайт използва бисквитки за подобряване на потребителското изживяване.",
+      "learn_more": "Научете повече",
+      "accept": "Приемам"
+    },
+    "machines_page": {
+      "title": "Кантослепващи машини",
+      "subtitle": "Произвеждаме качествени кантослепващи машини по поръчка според нуждите на всеки клиент"
+    },
+    "contact_page": {
+      "title": "Контакти",
+      "subtitle": "Свържете се с нас за консултация или поръчка",
+      "info_title": "Информация за контакт",
+      "address_label": "Адрес:",
+      "phone_label": "Телефон:",
+      "email_label": "Имейл:",
+      "form_title": "Изпратете запитване"
+    },
+    "product_page": {
+      "order_now": "Поръчай сега",
+      "call_us": "Обади се",
+      "technical_specs": "Технически характеристики",
+      "features": "Предимства"
+    }
+  },
+  "en": {
+    "brand": {
+      "name": "SOLIDNOST",
+      "tagline": "Manufacturing and repair of edgebanding machines"
+    },
+    "nav": {
+      "home": "HOME",
+      "machines": "EDGEBANDERS",
+      "services": "SERVICE",
+      "secondhand": "USED MACHINES",
+      "gallery": "GALLERY",
+      "photos": "PHOTOS",
+      "videos": "VIDEO GALLERY",
+      "contacts": "CONTACTS",
+      "phone": "+359 888 227 352"
+    },
+    "hero": {
+      "title1": "Manufacturing of Edgebanding Machines",
+      "subtitle1": "For the furniture industry since 1994",
+      "cta1": "View Products",
+      "title2": "Our Top Offers",
+      "subtitle2": "Quality and reliability at an affordable price",
+      "cta2": "Learn More"
+    },
+    "products": {
+      "title": "Top Products",
+      "viewDetails": "View Details",
+      "km7000_desc": "The image is illustrative. Machines with feed system are individually configured with each client for the desired aggregates to be installed.",
+      "km4001pe_desc": "Glues only the edge tape; suitable for straight and curved edgebanding; applies edge tapes with thickness from 0.40 to 2 mm.",
+      "km900m_desc": "Unique edgebanding machine that can pre-glue either the edge tape or the chipboard; suitable for straight and curved edgebanding.",
+      "km2015tpm_desc": "Applies all types of edge tapes from 0.3 to 2 mm; glues only the wooden detail; working speed - 8.4 m/min."
+    },
+    "about": {
+      "title": "About Us",
+      "intro": "Since 1994, the company has been an established Bulgarian manufacturer of <strong>edgebanding machines</strong>, equipment and custom machinery in the furniture production sector.",
+      "paragraph1": "The edgebanding machine serves to apply edge tapes to wooden or PVC surfaces.",
+      "paragraph2": "Machines are manufactured to order according to each client's needs.",
+      "paragraph3": "The high quality of our products and adherence to agreed deadlines are among our company's priorities. With our long-standing experience and constant pursuit of expanding our knowledge, we manage to meet our clients' requirements by offering competitive products and services with consistently high quality at an affordable price.",
+      "offers_title": "The company offers:",
+      "additional_title": "Additionally:",
+      "offer1": "Consultation for product requirements development",
+      "offer2": "Structural and functional design",
+      "offer3": "Construction and manufacturing",
+      "offer4": "Testing of the finished product",
+      "offer5": "Delivery and staff training",
+      "offer6": "Fair deadlines in agreements",
+      "offer7": "Quality and reliability of the product",
+      "offer8": "Use of high-quality materials",
+      "offer9": "Qualified personnel",
+      "additional1": "Full warranty on manufactured products",
+      "additional2": "Warranty and post-warranty technical service",
+      "additional3": "Execution of custom orders",
+      "additional4": "Improvement and modernization of existing machines",
+      "additional5": "Creation of new products",
+      "additional6": "Full range of spare parts",
+      "additional7": "Manufacturing of details, parts and assemblies",
+      "additional8": "Repairs of other machines",
+      "additional9": "Loyalty and fairness",
+      "export_note": "For export of edgebanding machines, we issue EURO 1 certificate and provide the necessary customs documentation."
+    },
+    "services": {
+      "title": "Services",
+      "service1": "Repairs with original parts for own machines",
+      "service2": "Major repairs of imported machines",
+      "service3": "Minor repairs and adjustments at client's location"
+    },
+    "contact": {
+      "title": "Questions and Orders",
+      "name": "Your Name",
+      "email": "Your Email *",
+      "phone": "Your Phone *",
+      "subject": "Regarding",
+      "message": "Your Question/Order",
+      "send": "Send",
+      "subject_general": "General Question",
+      "subject_product": "Product Information",
+      "subject_service": "Service",
+      "subject_quote": "Quote Request",
+      "info_title": "Information",
+      "contacts_title": "Contacts",
+      "machines_link": "Edgebanding Machines",
+      "services_link": "Service",
+      "secondhand_link": "Used Machines",
+      "gallery_link": "Gallery",
+      "contacts_link": "Contacts",
+      "address": "Ruse, Bulgaria, Tutrakan blvd. №20"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    },
+    "cookie": {
+      "message": "This site uses cookies to improve user experience.",
+      "learn_more": "Learn more",
+      "accept": "Accept"
+    },
+    "machines_page": {
+      "title": "Edgebanding Machines",
+      "subtitle": "We manufacture quality edgebanding machines to order according to each client's needs"
+    },
+    "contact_page": {
+      "title": "Contacts",
+      "subtitle": "Contact us for consultation or order",
+      "info_title": "Contact Information",
+      "address_label": "Address:",
+      "phone_label": "Phone:",
+      "email_label": "Email:",
+      "form_title": "Send Inquiry"
+    },
+    "product_page": {
+      "order_now": "Order Now",
+      "call_us": "Call Us",
+      "technical_specs": "Technical Specifications",
+      "features": "Features"
+    }
+  }
+}
